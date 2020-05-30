@@ -1,0 +1,27 @@
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: 386
+
+clone:
+  disable: true
+
+steps:
+- name: clone
+  commands:
+  - git clone http://gitlab/root/keepclean-test-project.git .
+  - git checkout $DRONE_COMMIT
+- name: prepare
+  commands:
+  - mkdir -p /tmp/drone/gems
+  - bundle config set path '/tmp/drone/gems'
+    #  - bundle install --jobs=3 --retry=3
+- name: keepclean
+  commands:
+    # - gem install /home/ylecuyer/Projects/keepclean/gem/keepclean-0.0.1.gem
+  - keepclean
+  environment:
+    KEEPCLEAN_TOKEN: 99MS5hXVd6JW2dJGBiBAYb3R
