@@ -25,3 +25,4 @@ steps:
   - keepclean
   environment:
     KEEPCLEAN_TOKEN: 99MS5hXVd6JW2dJGBiBAYb3R
+    KEEPCLEAN_SERVER: "http://localhost:5000"
