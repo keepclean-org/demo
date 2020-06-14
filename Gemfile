@@ -56,4 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #gem 'keepclean-fasterer', path: '/home/ylecuyer/Projects/keepclean/gem-fasterer'
 
 # test CVE
-gem 'nori', '2.0.0'
+gem 'nori', '2.0.3'
