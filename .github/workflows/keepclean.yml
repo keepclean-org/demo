@@ -12,8 +12,10 @@ jobs:
       with:
         ruby-version: '2.5'
     - name: bundle install
-      run: bundle install
-
+      run: |
+        gem install bundler -v '~> 1'
+        bundle install
+     
     - name: prepare the keepclean gem
       run: gem install keepclean
 
