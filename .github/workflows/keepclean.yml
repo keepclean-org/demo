@@ -14,6 +14,9 @@ jobs:
 
     - name: prepare the keepclean gem
       run: gem install keepclean
+      
+    - name: show bin
+      run: cat /opt/hostedtoolcache/Ruby/2.5.8/x64/bin/keepclean
   
     - name: gem env
       run: gem env
