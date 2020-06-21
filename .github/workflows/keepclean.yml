@@ -1,0 +1,16 @@
+name: KeepClean
+
+on: pull_request
+
+jobs:
+  keepclean:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: prepare the keepclean gem
+      run: gem install keepclean
+
+    - name: run keepclean
+      run: keepclean
