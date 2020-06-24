@@ -30,7 +30,7 @@ jobs:
     - name: prepare the keepclean gem
       run: gem install keepclean
       env:
-        KEEPCEAN_TOKEN: {{ secrets.KEEPCLEAN_TOKEN }}
+        KEEPCEAN_TOKEN: ${{ secrets.KEEPCLEAN_TOKEN }}
 
     - name: run keepclean
       run: keepclean
