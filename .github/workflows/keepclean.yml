@@ -26,11 +26,9 @@ jobs:
         gem install bundler -v '~> 1'
         bundle config path vendor/bundle
         bundle install
-     
     - name: prepare the keepclean gem
       run: gem install keepclean
-      env:
-        KEEPCEAN_TOKEN: ${{ secrets.KEEPCLEAN_TOKEN }}
-
     - name: run keepclean
       run: keepclean
+      env:
+        KEEPCEAN_TOKEN: ${{ secrets.KEEPCLEAN_TOKEN }}
