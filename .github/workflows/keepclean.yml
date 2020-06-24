@@ -31,4 +31,4 @@ jobs:
     - name: run keepclean
       run: keepclean
       env:
-        KEEPCEAN_TOKEN: ${{ secrets.KEEPCLEAN_TOKEN }}
+        KEEPCLEAN_TOKEN: ${{ secrets.KEEPCLEAN_TOKEN }}
